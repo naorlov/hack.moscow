@@ -1,16 +1,10 @@
 from uuid import uuid4
 import random
 import settings
-import pg
-
-
-def connect() -> pg.DB:
-    return pg.DB(**settings.db_connection)
 
 
 class UserServer:
     def __init__(self):
-        self.database = connect()
         pass
 
     def register(self, first_name, last_name, username, password):
@@ -65,7 +59,3 @@ class GrugServer:
     def get_info(self, id):
         pass
 
-
-if __name__ == '__main__':
-    database = pg.DB(**settings.db_connection)
-    database.query("")
