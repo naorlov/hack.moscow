@@ -1,5 +1,6 @@
 from uuid import uuid4
 import random
+import psycopg2
 
 
 class UserServer:
