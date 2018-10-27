@@ -1,0 +1,387 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 11.0
+-- Dumped by pg_dump version 11.0
+
+-- Started on 2018-10-27 03:49:30 MSK
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 203 (class 1259 OID 16434)
+-- Name: analysis; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.analysis (
+    id integer NOT NULL,
+    patient_id integer NOT NULL,
+    doctor_id integer NOT NULL,
+    description text
+);
+
+
+--
+-- TOC entry 204 (class 1259 OID 16442)
+-- Name: analysis_diagnosis_rel; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.analysis_diagnosis_rel (
+    id integer NOT NULL,
+    analysis_id integer NOT NULL,
+    diagnosis_id integer NOT NULL
+);
+
+
+--
+-- TOC entry 200 (class 1259 OID 16413)
+-- Name: diagnosis; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.diagnosis (
+    id integer NOT NULL,
+    start_date timestamp without time zone NOT NULL,
+    end_date timestamp without time zone,
+    description text,
+    patient_id integer NOT NULL,
+    doctor_id integer NOT NULL
+);
+
+
+--
+-- TOC entry 199 (class 1259 OID 16405)
+-- Name: drug_relations; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.drug_relations (
+    id integer,
+    drug_id_1 integer NOT NULL,
+    drug_id_2 integer NOT NULL,
+    drug_relation_type integer NOT NULL,
+    description text
+);
+
+
+--
+-- TOC entry 198 (class 1259 OID 16397)
+-- Name: drugs; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.drugs (
+    id integer,
+    description text
+);
+
+
+--
+-- TOC entry 206 (class 1259 OID 16453)
+-- Name: event_types; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.event_types (
+    id integer NOT NULL,
+    title character varying(255)
+);
+
+
+--
+-- TOC entry 205 (class 1259 OID 16447)
+-- Name: events; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.events (
+    id integer NOT NULL,
+    treatment_id integer NOT NULL,
+    drug_id integer,
+    event_date timestamp without time zone NOT NULL,
+    event_repeat_times integer DEFAULT 1 NOT NULL,
+    repeat_interval interval
+);
+
+
+--
+-- TOC entry 202 (class 1259 OID 16426)
+-- Name: patient_drug_restrictions; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.patient_drug_restrictions (
+    id integer NOT NULL,
+    patient_id integer NOT NULL,
+    restricted_drug_id integer NOT NULL,
+    description text
+);
+
+
+--
+-- TOC entry 197 (class 1259 OID 16392)
+-- Name: roles; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.roles (
+    id integer NOT NULL,
+    description character varying(255)
+);
+
+
+--
+-- TOC entry 201 (class 1259 OID 16421)
+-- Name: treatments; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.treatments (
+    id integer NOT NULL,
+    start_date timestamp without time zone NOT NULL,
+    end_date timestamp without time zone,
+    doctor_id integer NOT NULL,
+    diagnosis_id integer NOT NULL
+);
+
+
+--
+-- TOC entry 196 (class 1259 OID 16386)
+-- Name: users; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.users (
+    username character varying(255),
+    password character varying(255),
+    role integer,
+    first_name character varying(255),
+    last_name character varying(255),
+    id integer NOT NULL
+);
+
+
+--
+-- TOC entry 3232 (class 0 OID 16434)
+-- Dependencies: 203
+-- Data for Name: analysis; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.analysis (id, patient_id, doctor_id, description) FROM stdin;
+\.
+
+
+--
+-- TOC entry 3233 (class 0 OID 16442)
+-- Dependencies: 204
+-- Data for Name: analysis_diagnosis_rel; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.analysis_diagnosis_rel (id, analysis_id, diagnosis_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 3229 (class 0 OID 16413)
+-- Dependencies: 200
+-- Data for Name: diagnosis; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.diagnosis (id, start_date, end_date, description, patient_id, doctor_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 3228 (class 0 OID 16405)
+-- Dependencies: 199
+-- Data for Name: drug_relations; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.drug_relations (id, drug_id_1, drug_id_2, drug_relation_type, description) FROM stdin;
+\.
+
+
+--
+-- TOC entry 3227 (class 0 OID 16397)
+-- Dependencies: 198
+-- Data for Name: drugs; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.drugs (id, description) FROM stdin;
+\.
+
+
+--
+-- TOC entry 3235 (class 0 OID 16453)
+-- Dependencies: 206
+-- Data for Name: event_types; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.event_types (id, title) FROM stdin;
+1	take_medicine
+2	visit_doctor
+3	do_analysis
+\.
+
+
+--
+-- TOC entry 3234 (class 0 OID 16447)
+-- Dependencies: 205
+-- Data for Name: events; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.events (id, treatment_id, drug_id, event_date, event_repeat_times, repeat_interval) FROM stdin;
+\.
+
+
+--
+-- TOC entry 3231 (class 0 OID 16426)
+-- Dependencies: 202
+-- Data for Name: patient_drug_restrictions; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.patient_drug_restrictions (id, patient_id, restricted_drug_id, description) FROM stdin;
+\.
+
+
+--
+-- TOC entry 3226 (class 0 OID 16392)
+-- Dependencies: 197
+-- Data for Name: roles; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.roles (id, description) FROM stdin;
+1	patient
+2	doctor
+\.
+
+
+--
+-- TOC entry 3230 (class 0 OID 16421)
+-- Dependencies: 201
+-- Data for Name: treatments; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.treatments (id, start_date, end_date, doctor_id, diagnosis_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 3225 (class 0 OID 16386)
+-- Dependencies: 196
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.users (username, password, role, first_name, last_name, id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 3099 (class 2606 OID 16446)
+-- Name: analysis_diagnosis_rel analysis_diagnosis_rel_id_key; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.analysis_diagnosis_rel
+    ADD CONSTRAINT analysis_diagnosis_rel_id_key UNIQUE (id);
+
+
+--
+-- TOC entry 3097 (class 2606 OID 16441)
+-- Name: analysis analysis_id_key; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.analysis
+    ADD CONSTRAINT analysis_id_key UNIQUE (id);
+
+
+--
+-- TOC entry 3091 (class 2606 OID 16420)
+-- Name: diagnosis diagnosis_id_key; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.diagnosis
+    ADD CONSTRAINT diagnosis_id_key UNIQUE (id);
+
+
+--
+-- TOC entry 3089 (class 2606 OID 16412)
+-- Name: drug_relations drug_relations_id_key; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.drug_relations
+    ADD CONSTRAINT drug_relations_id_key UNIQUE (id);
+
+
+--
+-- TOC entry 3087 (class 2606 OID 16404)
+-- Name: drugs drugs_id_key; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.drugs
+    ADD CONSTRAINT drugs_id_key UNIQUE (id);
+
+
+--
+-- TOC entry 3103 (class 2606 OID 16457)
+-- Name: event_types event_types_id_key; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.event_types
+    ADD CONSTRAINT event_types_id_key UNIQUE (id);
+
+
+--
+-- TOC entry 3101 (class 2606 OID 16452)
+-- Name: events events_id_key; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.events
+    ADD CONSTRAINT events_id_key UNIQUE (id);
+
+
+--
+-- TOC entry 3095 (class 2606 OID 16433)
+-- Name: patient_drug_restrictions patient_drug_restrictions_id_key; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.patient_drug_restrictions
+    ADD CONSTRAINT patient_drug_restrictions_id_key UNIQUE (id);
+
+
+--
+-- TOC entry 3085 (class 2606 OID 16396)
+-- Name: roles roles_id_key; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.roles
+    ADD CONSTRAINT roles_id_key UNIQUE (id);
+
+
+--
+-- TOC entry 3093 (class 2606 OID 16425)
+-- Name: treatments treatments_id_key; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.treatments
+    ADD CONSTRAINT treatments_id_key UNIQUE (id);
+
+
+--
+-- TOC entry 3083 (class 2606 OID 16459)
+-- Name: users users_id_key; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.users
+    ADD CONSTRAINT users_id_key UNIQUE (id);
+
+
+-- Completed on 2018-10-27 03:49:30 MSK
+
+--
+-- PostgreSQL database dump complete
+--
+
