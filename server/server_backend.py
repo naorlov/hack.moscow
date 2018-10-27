@@ -78,8 +78,10 @@ class UserServer:
     def get_week_events(self, username, date):
         date_end = date + 7 * 24 * 60 * 60
         id = self.get_user_id(username)
-        query = f"""SELECT * FROM events WHERE '{date}' < "event_date" AND "event_date" < '{date_end}' AND """
-
-
-if __name__ == '__main__':
-    srv = UserServer()
+        query = f"""
+        SELECT events.*
+        FROM events
+               left join users on users.id = events.patient_id
+        where users.username = '{username}'
+          and events.event_date between {date} and {date_end}"""
+        return self.connection.query(query).dictresult()

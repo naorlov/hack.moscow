@@ -52,7 +52,7 @@ def find_events(data, treatment_id):
         return "ERROR"
 
 
-@app.route("/users/<int:user_id>", methods=["GET", "POST"])
+@app.route("/users/<int:user_id>/", methods=["GET", "POST"])
 def get_user_info(user_id):
     result = {}
 
@@ -91,7 +91,7 @@ def get_user_info(user_id):
     return jsonify(result)
 
 
-@app.route("/drug/<int:drug_id>")
+@app.route("/drug/<int:drug_id>/")
 def get_drug_info(drug_id):
     try:
         return jsonify(drugs.drugs[drug_id])
@@ -104,17 +104,23 @@ def login_user():
     data = request.get_json()
 
 
+@app.route("/user_events/week/", methods=["GET"])
+def get_week_events(day):
+    user_token = request.args["token"]
+    username = request.args["username"]
+    day = request.args["day"]
+    return srv.get_week_events(username, day)
 
-@app.route("/user_events/week", methods=["POST"])
-def get_week_events():
-    data = request.get_json()
-
-@app.route("/randarticle")
+@app.route("/user_events/day/<string:day>", methods=["GET"])
+def get_day_events(day):
+    user_token = request.args[""]
+@app.route("/randarticle/")
 def get_random_article():
     numArticles = srv.count_articles()
     randId = randint(1, numArticles)
     article = srv.get_article(randId)
     return jsonify(article)
+
 
 if __name__ == '__main__':
     app.run(host="127.0.0.1", port="9999")

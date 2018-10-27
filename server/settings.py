@@ -5,7 +5,7 @@ pickle_path = "./bin/data"
 db_connection = {
     "host": "localhost",
     "port": 5432,
-    "dbname": "dreamful",
-    "user": "dreamful",
-    "passwd": ""
+    "dbname": "dynacare",
+    "user": "postgres",
+    "passwd": "postgres"
 }
