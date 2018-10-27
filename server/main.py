@@ -1,4 +1,5 @@
 import os
+from random import randint
 
 from flask import Flask
 from flask import request
@@ -6,6 +7,7 @@ from flask import jsonify
 
 import database
 import drugs
+from server_backend import UserServer
 
 print("initializing flask")
 app = Flask(
@@ -13,6 +15,7 @@ app = Flask(
     root_path=os.path.abspath('.'),
 )
 
+srv = UserServer()
 ERROR = -1
 
 
@@ -106,6 +109,12 @@ def login_user():
 def get_week_events():
     data = request.get_json()
 
+@app.route("/randarticle")
+def get_random_article():
+    numArticles = srv.count_articles()
+    randId = randint(1, numArticles)
+    article = srv.get_article(randId)
+    return jsonify(article)
 
 if __name__ == '__main__':
     app.run(host="127.0.0.1", port="9999")

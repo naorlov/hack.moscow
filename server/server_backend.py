@@ -17,6 +17,16 @@ class UserServer:
     def __init__(self):
         self.connection = dbconnect()
 
+    def count_articles(self):
+        query = f"""SELECT count(*) FROM "articles" """
+        result = self.connection.query(query).getresult()
+        return result[0][0]
+
+    def get_article(self, article_id):
+        query = f"""SELECT * FROM "articles" WHERE id={article_id}"""
+        result = self.connection.query(query).dictresult()
+        return result[0]
+
     def is_username_free(self, username):
         query = f"""SELECT count(*) FROM "users" WHERE "username" = '{username}'"""
         result = self.connection.query(query).getresult()
