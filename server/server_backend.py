@@ -1,13 +1,21 @@
 from uuid import uuid4
 import random
+import settings
+import pg
+
+
+def connect() -> pg.DB:
+    return pg.DB(**settings.db_connection)
 
 
 class UserServer:
     def __init__(self):
+        self.database = connect()
         pass
 
     def register(self, first_name, last_name, username, password):
         user_id = str(uuid4())
+        
         return {"uid": user_id}
 
     def get_info(self, user_id=None, username=None):
@@ -15,6 +23,8 @@ class UserServer:
         first_name = random.choice(["Peter", "Nikolas", "Andel"])
         last_name = random.choice(["Jekirson", "Dales", "Stathem"])
         username = random.choice(["flooddeath", "manchesterbesiege", "spinglyyard"])
+
+
         return {"uid": user_id, "first_name": first_name, "last_name": last_name, "username": username}
 
     def start_disease_history(self, user_id, disease):
@@ -54,3 +64,8 @@ class GrugServer:
 
     def get_info(self, id):
         pass
+
+
+if __name__ == '__main__':
+    database = pg.DB(**settings.db_connection)
+    database.query("")

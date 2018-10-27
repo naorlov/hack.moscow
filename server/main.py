@@ -2,9 +2,6 @@ import os
 
 from flask import Flask
 from flask import request
-from flask import render_template
-from flask import send_from_directory
-from flask import redirect
 from flask import jsonify
 
 from server_backend import UserServer
@@ -35,3 +32,4 @@ def get_user_info(user_id):
 
 if __name__ == '__main__':
     app.run(host="127.0.0.1", port="9999")
+
