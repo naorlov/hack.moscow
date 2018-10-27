@@ -113,3 +113,20 @@ events = [
         "date": "",
     },
 ]
+
+
+
+# user_event = {
+#     "name"
+#     "t_start"
+#     "t_end"
+#     "desc"
+#     "palce"
+# }
+#
+# user_login = {
+#     "username"
+#     "password"
+# } -> token: uuid
+#
+#

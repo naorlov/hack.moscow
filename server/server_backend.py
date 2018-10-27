@@ -1,57 +1,75 @@
 from uuid import uuid4
-import random
+import os
+import pickle
 import settings
+import pg
+
+
+def dump_exists(path):
+    return os.path.isfile(path) and os.path.isfile(path)
+
+
+def dbconnect():
+    return pg.DB(**settings.db_connection)
+
+
 class UserServer:
     def __init__(self):
-        pass
+        self.connection = dbconnect()
+
+    def is_username_free(self, username):
+        query = f"""SELECT count(*) FROM "users" WHERE "username" = '{username}'"""
+        result = self.connection.query(query).getresult()
+        return result[0][0] == 0
+
+    def gen_token(self, username):
+        token = uuid4()
+        query = f"""UPDATE "public"."users" SET "token" = '{token}' WHERE "username" = '{username}'"""
+        self.connection.query(query)
+        return token
+
+    def get_token(self, username):
+        query = f"""SELECT "token" FROM "users" WHERE "username" = '{username}'"""
+        return self.connection.query(query).getresult()[0][0]
+
+    def auth_token(self, username, token):
+        actual_token = self.get_token(username)
+        return actual_token == token
+
+    def authorize(self, username, password):
+        query = f"""SELECT "password" FROM users WHERE "username" = '{username}'"""
+        password_actual = self.connection.query(query).getresult()[0][0]
+        if password_actual == password:
+            return self.gen_token(username)
+        return {"error": "incorrect_password"}
 
     def register(self, first_name, last_name, username, password):
-        user_id = str(uuid4())
 
-        return {"uid": user_id}
+        if not self.is_username_free(username):
+            return {"error": "username occupied"}
 
-    def get_info(self, user_id=None, username=None):
-        pass
+        query = f"""
+        INSERT INTO "users" ("username", "password", "role", "first_name", "last_name") \
+        VALUES ('{username}', '{password}', 'patient', '{first_name}', '{last_name}')
+        """
 
-    def start_disease_history(self, user_id, disease):
-        pass
+        self.connection.query(query)
 
-    def get_disease_info(self, user_id, disease):
-        pass
+        return self.gen_token(username)
 
-    def end_disease_history(self, user_id, disease):
-        pass
+    def get_user(self, username=None, id=None):
+        query = f"""SELECT * FROM "public"."users" WHERE "username" = '{username}'"""
+        return self.connection.query(query).dictresult()
 
-    def get_diseases(self, user_id):
-        pass
+    def get_user_id(self, username):
+        query = f"""SELECT "id" FROM users WHERE "username" = '{username}'"""
+        return self.connection.query(query).getresult()[0][0]
 
-    def add_treatment_step(self, user_id, disease_id, step):
-        pass
-
-    def confirm_treatment_step(self, user_id, disease_id, stepid):
-        pass
-
-    def get_treatment_steps(self, disease_id):
-        pass
-
-    def add_user_state(self, user_id, state):
-        pass
-
-    def get_user_state_history(self, user_id):
-        pass
-
-
-class GrugServer:
-    def __init__(self):
-        pass
-
-    def register(self):
-        pass
-
-    def get_info(self, id):
-        pass
+    def get_week_events(self, username, date):
+        date_end = date + 7 * 24 * 60 * 60
+        id = self.get_user_id(username)
+        query = f"""SELECT * FROM events WHERE '{date}' < "event_date" AND "event_date" < '{date_end}' AND """
 
 
 if __name__ == '__main__':
-    database = pg.DB(**settings.db_connection)
-    database.query("")
+    srv = UserServer()

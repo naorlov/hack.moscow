@@ -95,5 +95,17 @@ def get_drug_info(drug_id):
     except:
         return jsonify({"id": -1})
 
+
+@app.route("/login", methods=["POST"])
+def login_user():
+    data = request.get_json()
+
+
+
+@app.route("/user_events/week", methods=["POST"])
+def get_week_events():
+    data = request.get_json()
+
+
 if __name__ == '__main__':
     app.run(host="127.0.0.1", port="9999")
