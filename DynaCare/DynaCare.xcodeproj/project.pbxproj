@@ -22,9 +22,9 @@
 		5FA5803121847B1300C5D716 /* AMInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5802621847B1300C5D716 /* AMInputView.swift */; };
 		5FA5803221847B1300C5D716 /* AMInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA5802721847B1300C5D716 /* AMInputView.xib */; };
 		5FA8BD362184D34D00E2494C /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8BD352184D34D00E2494C /* CodeViewController.swift */; };
-		5FA8BD382184D99100E2494C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA8BD372184D99100E2494C /* Media.xcassets */; };
 		5FA8BD3A2184E34400E2494C /* TinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8BD392184E34400E2494C /* TinderViewController.swift */; };
 		5FA8BD3C2184E40000E2494C /* TinderSegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8BD3B2184E40000E2494C /* TinderSegmentController.swift */; };
+		5FD9F41F2185871A00F35C50 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FD9F41E2185871A00F35C50 /* Media.xcassets */; };
 		5FFBE5CC21852132006E9868 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFBE5CB21852132006E9868 /* UserModel.swift */; };
 		5FFBE5CE2185214A006E9868 /* DrugsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFBE5CD2185214A006E9868 /* DrugsModel.swift */; };
 		5FFBE5D021852159006E9868 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFBE5CF21852159006E9868 /* EventModel.swift */; };
@@ -54,9 +54,9 @@
 		5FA5802621847B1300C5D716 /* AMInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMInputView.swift; sourceTree = "<group>"; };
 		5FA5802721847B1300C5D716 /* AMInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMInputView.xib; sourceTree = "<group>"; };
 		5FA8BD352184D34D00E2494C /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
-		5FA8BD372184D99100E2494C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = ../../Media.xcassets; sourceTree = "<group>"; };
 		5FA8BD392184E34400E2494C /* TinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderViewController.swift; sourceTree = "<group>"; };
 		5FA8BD3B2184E40000E2494C /* TinderSegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderSegmentController.swift; sourceTree = "<group>"; };
+		5FD9F41E2185871A00F35C50 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		5FFBE5CB21852132006E9868 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		5FFBE5CD2185214A006E9868 /* DrugsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsModel.swift; sourceTree = "<group>"; };
 		5FFBE5CF21852159006E9868 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 				5FA580072183E06900C5D716 /* AppDelegate.swift */,
 				5FA5800D2183E06A00C5D716 /* Main.storyboard */,
 				5FA580152183E06B00C5D716 /* Info.plist */,
-				5FA8BD372184D99100E2494C /* Media.xcassets */,
+				5FD9F41E2185871A00F35C50 /* Media.xcassets */,
 				5FFBE5CF21852159006E9868 /* EventModel.swift */,
 				5FFBE5CB21852132006E9868 /* UserModel.swift */,
 				5FFBE5DE218523F2006E9868 /* Launch Screen.storyboard */,
@@ -261,10 +261,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FA8BD382184D99100E2494C /* Media.xcassets in Resources */,
 				5FA5803221847B1300C5D716 /* AMInputView.xib in Resources */,
 				5F70CF4A2185806000E1A51B /* TimelineTableViewCell.xib in Resources */,
 				5FFBE5DF218523F2006E9868 /* Launch Screen.storyboard in Resources */,
+				5FD9F41F2185871A00F35C50 /* Media.xcassets in Resources */,
 				5FA5800F2183E06A00C5D716 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
