@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DynaCare/OnboardingViewController.swift"
+            timestampString = "562344412.563378"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "OnboardingViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DynaCare.OnboardingViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; DynaCare.OnboardingViewController"
+                  moduleName = "DynaCare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/NumenZ/Desktop/DynaCare/DynaCare/OnboardingViewController.swift"
+                  timestampString = "562297348.6114171"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "195">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DynaCare.OnboardingViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;DynaCare.OnboardingViewController&gt;"
+                  moduleName = "DynaCare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/NumenZ/Desktop/DynaCare/DynaCare/OnboardingViewController.swift"
+                  timestampString = "562297348.6146441"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "162">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

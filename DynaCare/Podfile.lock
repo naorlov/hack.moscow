@@ -1,0 +1,54 @@
+PODS:
+  - Alamofire (4.7.3)
+  - AlamofireObjectMapper (5.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.3)
+  - HexColors (2.3.0)
+  - Kingfisher (4.10.0)
+  - MarkdownView (1.5.0)
+  - ObjectMapper (3.3.0)
+  - paper-onboarding (5.0.0)
+  - ScalingCarousel (2.4.1)
+  - ScrollingStackViewController (4.0.0)
+  - TimelineTableViewCell (1.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - AlamofireObjectMapper (~> 5.0)
+  - HexColors (~> 2.3)
+  - Kingfisher (~> 4.0)
+  - MarkdownView
+  - ObjectMapper (~> 3.3)
+  - paper-onboarding
+  - ScalingCarousel
+  - ScrollingStackViewController
+  - TimelineTableViewCell
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
+    - HexColors
+    - Kingfisher
+    - MarkdownView
+    - ObjectMapper
+    - paper-onboarding
+    - ScalingCarousel
+    - ScrollingStackViewController
+    - TimelineTableViewCell
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireObjectMapper: 3395e698901d8b0e6f48b7d0c43bd47875325102
+  HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
+  Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
+  MarkdownView: 5bbee438c823db1cd189002d44c84fa909b3a896
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  paper-onboarding: a2e3a710fd27ac0b5635ec5490660e7ec09289b5
+  ScalingCarousel: 2f8d7d7dc02a4aff33ad0ca4148f9b27b2c8f91c
+  ScrollingStackViewController: 8ef2b10e92dc851045225fe7557c14e4d840b9ee
+  TimelineTableViewCell: 71a4bc787bfeb5a85083171d18b113a5f5db2be8
+
+PODFILE CHECKSUM: 53365cc4d3a7c45b892bebe03678c29bf9339b5d
+
+COCOAPODS: 1.5.2

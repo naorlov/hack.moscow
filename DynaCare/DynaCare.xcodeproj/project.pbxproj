@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F21A6672185708000CD2FD9 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F21A6662185708000CD2FD9 /* SearchFooter.swift */; };
+		5F21A669218570AE00CD2FD9 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F21A668218570AE00CD2FD9 /* DetailedViewController.swift */; };
+		5F21A66B218579A300CD2FD9 /* BigCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F21A66A218579A300CD2FD9 /* BigCalendar.swift */; };
+		5F70CF4821857C6700E1A51B /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F70CF4721857C6700E1A51B /* CalendarEvent.swift */; };
+		5F70CF4A2185806000E1A51B /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F70CF492185806000E1A51B /* TimelineTableViewCell.xib */; };
+		5F70CF4C218580AB00E1A51B /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F70CF4B218580AB00E1A51B /* TimelineTableViewController.swift */; };
+		5FA580082183E06900C5D716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA580072183E06900C5D716 /* AppDelegate.swift */; };
+		5FA5800C2183E06900C5D716 /* DrugTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5800B2183E06900C5D716 /* DrugTableViewController.swift */; };
+		5FA5800F2183E06A00C5D716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA5800D2183E06A00C5D716 /* Main.storyboard */; };
+		5FA5801C2183F3B200C5D716 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5801B2183F3B200C5D716 /* OnboardingViewController.swift */; };
+		5FA5801E2183F6F200C5D716 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5801D2183F6F200C5D716 /* Images.swift */; };
+		5FA580222184689100C5D716 /* LoginViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA580212184689100C5D716 /* LoginViewCoordinator.swift */; };
+		5FA5803121847B1300C5D716 /* AMInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5802621847B1300C5D716 /* AMInputView.swift */; };
+		5FA5803221847B1300C5D716 /* AMInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA5802721847B1300C5D716 /* AMInputView.xib */; };
+		5FA8BD362184D34D00E2494C /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8BD352184D34D00E2494C /* CodeViewController.swift */; };
+		5FA8BD382184D99100E2494C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA8BD372184D99100E2494C /* Media.xcassets */; };
+		5FA8BD3A2184E34400E2494C /* TinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8BD392184E34400E2494C /* TinderViewController.swift */; };
+		5FA8BD3C2184E40000E2494C /* TinderSegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8BD3B2184E40000E2494C /* TinderSegmentController.swift */; };
+		5FFBE5CC21852132006E9868 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFBE5CB21852132006E9868 /* UserModel.swift */; };
+		5FFBE5CE2185214A006E9868 /* DrugsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFBE5CD2185214A006E9868 /* DrugsModel.swift */; };
+		5FFBE5D021852159006E9868 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFBE5CF21852159006E9868 /* EventModel.swift */; };
+		5FFBE5D2218521ED006E9868 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFBE5D1218521ED006E9868 /* CalendarController.swift */; };
+		5FFBE5D421852258006E9868 /* CalendarAnalysisCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFBE5D321852258006E9868 /* CalendarAnalysisCell.swift */; };
+		5FFBE5DF218523F2006E9868 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FFBE5DE218523F2006E9868 /* Launch Screen.storyboard */; };
+		5FFBE5E42185536F006E9868 /* DrugDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFBE5E32185536F006E9868 /* DrugDetails.swift */; };
+		EA5417CE9410A2EA7F6AE83D /* Pods_DynaCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1F05CD59BDCD3E237852985 /* Pods_DynaCare.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		42946970665D73EA14A3273C /* Pods-DynaCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynaCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-DynaCare/Pods-DynaCare.release.xcconfig"; sourceTree = "<group>"; };
+		5F21A6662185708000CD2FD9 /* SearchFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
+		5F21A668218570AE00CD2FD9 /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
+		5F21A66A218579A300CD2FD9 /* BigCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCalendar.swift; sourceTree = "<group>"; };
+		5F70CF4721857C6700E1A51B /* CalendarEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
+		5F70CF492185806000E1A51B /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
+		5F70CF4B218580AB00E1A51B /* TimelineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewController.swift; sourceTree = "<group>"; };
+		5FA580042183E06900C5D716 /* DynaCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynaCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FA580072183E06900C5D716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5FA5800B2183E06900C5D716 /* DrugTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugTableViewController.swift; sourceTree = "<group>"; };
+		5FA5800E2183E06A00C5D716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5FA580152183E06B00C5D716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FA5801B2183F3B200C5D716 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		5FA5801D2183F6F200C5D716 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		5FA580212184689100C5D716 /* LoginViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewCoordinator.swift; sourceTree = "<group>"; };
+		5FA5802621847B1300C5D716 /* AMInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMInputView.swift; sourceTree = "<group>"; };
+		5FA5802721847B1300C5D716 /* AMInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMInputView.xib; sourceTree = "<group>"; };
+		5FA8BD352184D34D00E2494C /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
+		5FA8BD372184D99100E2494C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = ../../Media.xcassets; sourceTree = "<group>"; };
+		5FA8BD392184E34400E2494C /* TinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderViewController.swift; sourceTree = "<group>"; };
+		5FA8BD3B2184E40000E2494C /* TinderSegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderSegmentController.swift; sourceTree = "<group>"; };
+		5FFBE5CB21852132006E9868 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		5FFBE5CD2185214A006E9868 /* DrugsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsModel.swift; sourceTree = "<group>"; };
+		5FFBE5CF21852159006E9868 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		5FFBE5D1218521ED006E9868 /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
+		5FFBE5D321852258006E9868 /* CalendarAnalysisCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAnalysisCell.swift; sourceTree = "<group>"; };
+		5FFBE5DE218523F2006E9868 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		5FFBE5E32185536F006E9868 /* DrugDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDetails.swift; sourceTree = "<group>"; };
+		A7FEC1A00B1D57144BB3C77E /* Pods-DynaCare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynaCare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DynaCare/Pods-DynaCare.debug.xcconfig"; sourceTree = "<group>"; };
+		B1F05CD59BDCD3E237852985 /* Pods_DynaCare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynaCare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5FA580012183E06900C5D716 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA5417CE9410A2EA7F6AE83D /* Pods_DynaCare.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		567988C0F21A33675CB37F76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1F05CD59BDCD3E237852985 /* Pods_DynaCare.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A13B48EAD07D533440CD912 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7FEC1A00B1D57144BB3C77E /* Pods-DynaCare.debug.xcconfig */,
+				42946970665D73EA14A3273C /* Pods-DynaCare.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5FA57FFB2183E06900C5D716 = {
+			isa = PBXGroup;
+			children = (
+				5FA580062183E06900C5D716 /* DynaCare */,
+				5FA580052183E06900C5D716 /* Products */,
+				5A13B48EAD07D533440CD912 /* Pods */,
+				567988C0F21A33675CB37F76 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5FA580052183E06900C5D716 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FA580042183E06900C5D716 /* DynaCare.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5FA580062183E06900C5D716 /* DynaCare */ = {
+			isa = PBXGroup;
+			children = (
+				5FA8BD342184D33400E2494C /* TinderArticles */,
+				5FFBE5CA2185210D006E9868 /* LoginSignUp */,
+				5FFBE5DB21852313006E9868 /* Calendar */,
+				5FA8BD332184B1FB00E2494C /* Onboarding */,
+				5FFBE5E221855190006E9868 /* DrugListing */,
+				5FA580072183E06900C5D716 /* AppDelegate.swift */,
+				5FA5800D2183E06A00C5D716 /* Main.storyboard */,
+				5FA580152183E06B00C5D716 /* Info.plist */,
+				5FA8BD372184D99100E2494C /* Media.xcassets */,
+				5FFBE5CF21852159006E9868 /* EventModel.swift */,
+				5FFBE5CB21852132006E9868 /* UserModel.swift */,
+				5FFBE5DE218523F2006E9868 /* Launch Screen.storyboard */,
+			);
+			path = DynaCare;
+			sourceTree = "<group>";
+		};
+		5FA5802521847B1300C5D716 /* AMInputView */ = {
+			isa = PBXGroup;
+			children = (
+				5FA5802621847B1300C5D716 /* AMInputView.swift */,
+				5FA5802721847B1300C5D716 /* AMInputView.xib */,
+			);
+			path = AMInputView;
+			sourceTree = "<group>";
+		};
+		5FA8BD332184B1FB00E2494C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				5FA5801B2183F3B200C5D716 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		5FA8BD342184D33400E2494C /* TinderArticles */ = {
+			isa = PBXGroup;
+			children = (
+				5FA8BD392184E34400E2494C /* TinderViewController.swift */,
+				5FA8BD3B2184E40000E2494C /* TinderSegmentController.swift */,
+				5FA8BD352184D34D00E2494C /* CodeViewController.swift */,
+			);
+			path = TinderArticles;
+			sourceTree = "<group>";
+		};
+		5FFBE5CA2185210D006E9868 /* LoginSignUp */ = {
+			isa = PBXGroup;
+			children = (
+				5FA5802521847B1300C5D716 /* AMInputView */,
+				5FA5801D2183F6F200C5D716 /* Images.swift */,
+				5FA580212184689100C5D716 /* LoginViewCoordinator.swift */,
+			);
+			path = LoginSignUp;
+			sourceTree = "<group>";
+		};
+		5FFBE5DB21852313006E9868 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				5FFBE5D1218521ED006E9868 /* CalendarController.swift */,
+				5F70CF492185806000E1A51B /* TimelineTableViewCell.xib */,
+				5FFBE5D321852258006E9868 /* CalendarAnalysisCell.swift */,
+				5F21A66A218579A300CD2FD9 /* BigCalendar.swift */,
+				5F70CF4721857C6700E1A51B /* CalendarEvent.swift */,
+				5F70CF4B218580AB00E1A51B /* TimelineTableViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		5FFBE5E221855190006E9868 /* DrugListing */ = {
+			isa = PBXGroup;
+			children = (
+				5FFBE5CD2185214A006E9868 /* DrugsModel.swift */,
+				5FA5800B2183E06900C5D716 /* DrugTableViewController.swift */,
+				5FFBE5E32185536F006E9868 /* DrugDetails.swift */,
+				5F21A6662185708000CD2FD9 /* SearchFooter.swift */,
+				5F21A668218570AE00CD2FD9 /* DetailedViewController.swift */,
+			);
+			path = DrugListing;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5FA580032183E06900C5D716 /* DynaCare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FA580182183E06B00C5D716 /* Build configuration list for PBXNativeTarget "DynaCare" */;
+			buildPhases = (
+				A3A0EF32D54963A813906DAE /* [CP] Check Pods Manifest.lock */,
+				5FA580002183E06900C5D716 /* Sources */,
+				5FA580012183E06900C5D716 /* Frameworks */,
+				5FA580022183E06900C5D716 /* Resources */,
+				72E6B0CD963827AA2A5F0C7C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynaCare;
+			productName = DynaCare;
+			productReference = 5FA580042183E06900C5D716 /* DynaCare.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5FA57FFC2183E06900C5D716 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Petr Kuznetsov";
+				TargetAttributes = {
+					5FA580032183E06900C5D716 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.HomeKit = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 5FA57FFF2183E06900C5D716 /* Build configuration list for PBXProject "DynaCare" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5FA57FFB2183E06900C5D716;
+			productRefGroup = 5FA580052183E06900C5D716 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5FA580032183E06900C5D716 /* DynaCare */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5FA580022183E06900C5D716 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FA8BD382184D99100E2494C /* Media.xcassets in Resources */,
+				5FA5803221847B1300C5D716 /* AMInputView.xib in Resources */,
+				5F70CF4A2185806000E1A51B /* TimelineTableViewCell.xib in Resources */,
+				5FFBE5DF218523F2006E9868 /* Launch Screen.storyboard in Resources */,
+				5FA5800F2183E06A00C5D716 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72E6B0CD963827AA2A5F0C7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DynaCare/Pods-DynaCare-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/HexColors/HexColors.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MarkdownView/MarkdownView.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework",
+				"${BUILT_PRODUCTS_DIR}/ScrollingStackViewController/ScrollingStackViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/TimelineTableViewCell/TimelineTableViewCell.framework",
+				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HexColors.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarkdownView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScalingCarousel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollingStackViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TimelineTableViewCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DynaCare/Pods-DynaCare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3A0EF32D54963A813906DAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DynaCare-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FA580002183E06900C5D716 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FA5800C2183E06900C5D716 /* DrugTableViewController.swift in Sources */,
+				5F21A669218570AE00CD2FD9 /* DetailedViewController.swift in Sources */,
+				5F70CF4C218580AB00E1A51B /* TimelineTableViewController.swift in Sources */,
+				5FA580222184689100C5D716 /* LoginViewCoordinator.swift in Sources */,
+				5FA580082183E06900C5D716 /* AppDelegate.swift in Sources */,
+				5F70CF4821857C6700E1A51B /* CalendarEvent.swift in Sources */,
+				5FFBE5E42185536F006E9868 /* DrugDetails.swift in Sources */,
+				5FFBE5D2218521ED006E9868 /* CalendarController.swift in Sources */,
+				5F21A66B218579A300CD2FD9 /* BigCalendar.swift in Sources */,
+				5FA8BD3C2184E40000E2494C /* TinderSegmentController.swift in Sources */,
+				5FA5801E2183F6F200C5D716 /* Images.swift in Sources */,
+				5FA5803121847B1300C5D716 /* AMInputView.swift in Sources */,
+				5FA8BD362184D34D00E2494C /* CodeViewController.swift in Sources */,
+				5FFBE5D021852159006E9868 /* EventModel.swift in Sources */,
+				5F21A6672185708000CD2FD9 /* SearchFooter.swift in Sources */,
+				5FFBE5D421852258006E9868 /* CalendarAnalysisCell.swift in Sources */,
+				5FA5801C2183F3B200C5D716 /* OnboardingViewController.swift in Sources */,
+				5FFBE5CE2185214A006E9868 /* DrugsModel.swift in Sources */,
+				5FA8BD3A2184E34400E2494C /* TinderViewController.swift in Sources */,
+				5FFBE5CC21852132006E9868 /* UserModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5FA5800D2183E06A00C5D716 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FA5800E2183E06A00C5D716 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5FA580162183E06B00C5D716 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5FA580172183E06B00C5D716 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5FA580192183E06B00C5D716 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7FEC1A00B1D57144BB3C77E /* Pods-DynaCare.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5QCF397L45;
+				INFOPLIST_FILE = DynaCare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.numenz.DynaCare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5FA5801A2183E06B00C5D716 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42946970665D73EA14A3273C /* Pods-DynaCare.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5QCF397L45;
+				INFOPLIST_FILE = DynaCare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.numenz.DynaCare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5FA57FFF2183E06900C5D716 /* Build configuration list for PBXProject "DynaCare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FA580162183E06B00C5D716 /* Debug */,
+				5FA580172183E06B00C5D716 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FA580182183E06B00C5D716 /* Build configuration list for PBXNativeTarget "DynaCare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FA580192183E06B00C5D716 /* Debug */,
+				5FA5801A2183E06B00C5D716 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5FA57FFC2183E06900C5D716 /* Project object */;
+}
