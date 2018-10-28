@@ -17,7 +17,7 @@ class TimelineTableViewController: UITableViewController {
     let MainURL = URL(string: "http://35.204.85.94:8888/user_events/day")!;
 
     // TimelinePoint, Timeline back color, title, description, lineInfo, thumbnail, illustration
-    let data:[Int: [(TimelinePoint, UIColor, String, String, String?, String?, String?)]] =
+    var data:[Int: [(TimelinePoint, UIColor, String, String, String?, String?, String?)]] =
         [0:[
         (TimelinePoint(), UIColor.black, "12:30", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", nil, nil, "Sun"),
         (TimelinePoint(), UIColor.black, "15:30", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", nil, nil, "Sun"),
@@ -56,8 +56,22 @@ class TimelineTableViewController: UITableViewController {
                 if let druggsArray = druggsArray {
                     calEvents = druggsArray;
                     for event in druggsArray {
-                        print(event.drugId)
-                        print(event.eventType)
+//                        drugId
+                        let formatter = DateFormatter()
+                        // initially set the format based on your datepicker date / server String
+                        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                        let myDateString = formatter.string(from: event.eventDate ?? Date());
+                        let event: (TimelinePoint, UIColor, String, String, String?, String?, String?) = (
+                            TimelinePoint(),
+                            UIColor.lightGray,
+                            myDateString,
+                            event.desc! + "\n\n" + event.analysis!,
+                            Array<String>(arrayLiteral: "37 min", "42 min", "106 min").randomElement(),
+                            event.eventType,
+                            .some("Sun")
+                        )
+                        print(event)
+//                        self.data = [0: [event]];
                     }
                 }
         }

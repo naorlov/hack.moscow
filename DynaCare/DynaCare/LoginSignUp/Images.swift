@@ -59,7 +59,7 @@ enum Asset {
     static let wallet = ImageAsset(name: "Wallet")
     
     static let computer = ImageAsset(name: "Computer")
-    static let doctor = ImageAsset(name: "Doctor")
+    static let doctor = ImageAsset(name: "Doctor1")
     static let pills = ImageAsset(name: "Pills")
     static let head = ImageAsset(name: "Head")
     
