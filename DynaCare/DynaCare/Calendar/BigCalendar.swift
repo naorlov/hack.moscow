@@ -36,45 +36,87 @@ class TimelineTableViewController: UITableViewController {
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "yyyy-MM-dd"
         
-        let now = dateformatter.string(from: Date())
         
-        let parameters: Parameters = [
-            "day": now,
-            "token": userToken
-        ];
-
-        Alamofire
-            .request(
-            MainURL,
-            parameters: parameters
-            )
-            .responseArray {
-                [unowned self] (response: DataResponse<[CalendarEvent]>) -> Void in
-
-                let druggsArray = response.result.value;
-
-                if let druggsArray = druggsArray {
-                    calEvents = druggsArray;
-                    for event in druggsArray {
-//                        drugId
-                        let formatter = DateFormatter()
-                        // initially set the format based on your datepicker date / server String
-                        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-                        let myDateString = formatter.string(from: event.eventDate ?? Date());
-                        let event: (TimelinePoint, UIColor, String, String, String?, String?, String?) = (
-                            TimelinePoint(),
-                            UIColor.lightGray,
-                            myDateString,
-                            event.desc! + "\n\n" + event.analysis!,
-                            Array<String>(arrayLiteral: "37 min", "42 min", "106 min").randomElement(),
-                            event.eventType,
-                            .some("Sun")
-                        )
-                        print(event)
-//                        self.data = [0: [event]];
+        
+        
+        let now = dateformatter.string(from: Date())
+        let tomorrow = dateformatter.string(from: Date().tomorrow);
+        var ar_counter = 0;
+        typealias bigbig = (TimelinePoint, UIColor, String, String, String?, String?, String?);
+        var interm: [bigbig] = [];
+        var oterm: [bigbig] = [];
+        var flag: Bool = false;
+        for date in [now] {
+            let parameters: Parameters = [
+                "day": date,
+                "token": userToken
+            ];
+            
+            DispatchQueue.main.async {
+            Alamofire
+                .request(
+                    self.MainURL,
+                    parameters: parameters
+                )
+                .responseArray {
+                    [unowned self] (response: DataResponse<[CalendarEvent]>) -> Void in
+                    
+                    let druggsArray = response.result.value;
+                    var events: [bigbig] = [];
+                    if let druggsArray = druggsArray {
+                        calEvents = druggsArray;
+                        for event in druggsArray {
+                            flag = true;
+                            let formatter = DateFormatter()
+                            // initially set the format based on your datepicker date / server String
+                            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                            let myDateString = formatter.string(from: event.eventDate ?? Date());
+                            
+                            var desc = (event.desc ?? "Today I have an appointment!") + "\n\n";
+                            desc += event.analysis ?? "Doctor told me that I'm going to live!";
+                            
+                            let event: bigbig = (
+                                TimelinePoint(),
+                                UIColor.lightGray,
+                                myDateString,
+                                desc,
+                                Array<String>(arrayLiteral: "37 min", "42 min", "106 min").randomElement(),
+                                event.eventType,
+                                .some("Sun")
+                            )
+                            print(events)
+                            events.append(event)
+                        }
+                        if ar_counter == 0 {
+                            print("This")
+                            self.data = [0: events];
+                            interm = events;
+                            self.tableView.reloadData();
+                        } else {
+                            print("That")
+                            oterm = events;
+                            self.data = [1: events];
+                            self.tableView.reloadData();
+                        }
+                        ar_counter += 1;
                     }
+                    print("This is flag: \(flag)\n")
                 }
+            print("This is flag: \(flag)\n")
+            }
         }
+        print("This is flag: \(flag)\n")
+        
+        if flag == true {
+            print("Even here?")
+            self.data = [
+                0: interm,
+                1: oterm
+            ]
+            self.tableView.reloadData();
+            print(data)
+        }
+        
 
         // Uncomment the following line to preserve selection between presentations
          self.clearsSelectionOnViewWillAppear = false
@@ -193,5 +235,40 @@ class TimelineTableViewController: UITableViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    
+}
+
+extension Date {
+    var yesterday: Date {
+        return Calendar.current.date(byAdding: .day, value: -1, to: noon)!
+    }
+    var tomorrow: Date {
+        return Calendar.current.date(byAdding: .day, value: 1, to: noon)!
+    }
+    var noon: Date {
+        return Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: self)!
+    }
+    var month: Int {
+        return Calendar.current.component(.month,  from: self)
+    }
+    var isLastDayOfMonth: Bool {
+        return tomorrow.month != month
+    }
+    
+    func generateRandomDate(daysBack: Int) -> Date? {
+        let day = arc4random_uniform(UInt32(daysBack))+1
+        let hour = arc4random_uniform(23)
+        let minute = arc4random_uniform(59)
+        
+        let today = Date(timeIntervalSinceNow: 0)
+        let gregorian  = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)
+        var offsetComponents = DateComponents()
+        offsetComponents.day = Int(day - 1)
+        offsetComponents.hour = Int(hour)
+        offsetComponents.minute = Int(minute)
+        
+        let randomDate = gregorian?.date(byAdding: offsetComponents, to: today, options: .init(rawValue: 0) )
+        return randomDate
+    }
     
 }

@@ -25,6 +25,7 @@
 		5FA8BD3A2184E34400E2494C /* TinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8BD392184E34400E2494C /* TinderViewController.swift */; };
 		5FA8BD3C2184E40000E2494C /* TinderSegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8BD3B2184E40000E2494C /* TinderSegmentController.swift */; };
 		5FD9F41F2185871A00F35C50 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FD9F41E2185871A00F35C50 /* Media.xcassets */; };
+		5FD9F421218711D400F35C50 /* CustomUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD9F420218711D400F35C50 /* CustomUITabBarController.swift */; };
 		5FFBE5CC21852132006E9868 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFBE5CB21852132006E9868 /* UserModel.swift */; };
 		5FFBE5CE2185214A006E9868 /* DrugsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFBE5CD2185214A006E9868 /* DrugsModel.swift */; };
 		5FFBE5D021852159006E9868 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFBE5CF21852159006E9868 /* EventModel.swift */; };
@@ -57,6 +58,7 @@
 		5FA8BD392184E34400E2494C /* TinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderViewController.swift; sourceTree = "<group>"; };
 		5FA8BD3B2184E40000E2494C /* TinderSegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderSegmentController.swift; sourceTree = "<group>"; };
 		5FD9F41E2185871A00F35C50 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		5FD9F420218711D400F35C50 /* CustomUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITabBarController.swift; sourceTree = "<group>"; };
 		5FFBE5CB21852132006E9868 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		5FFBE5CD2185214A006E9868 /* DrugsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsModel.swift; sourceTree = "<group>"; };
 		5FFBE5CF21852159006E9868 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				5FFBE5CF21852159006E9868 /* EventModel.swift */,
 				5FFBE5CB21852132006E9868 /* UserModel.swift */,
 				5FFBE5DE218523F2006E9868 /* Launch Screen.storyboard */,
+				5FD9F420218711D400F35C50 /* CustomUITabBarController.swift */,
 			);
 			path = DynaCare;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FD9F421218711D400F35C50 /* CustomUITabBarController.swift in Sources */,
 				5FA5800C2183E06900C5D716 /* DrugTableViewController.swift in Sources */,
 				5F21A669218570AE00CD2FD9 /* DetailedViewController.swift in Sources */,
 				5F70CF4C218580AB00E1A51B /* TimelineTableViewController.swift in Sources */,

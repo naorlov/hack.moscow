@@ -88,7 +88,7 @@ class OnboardingViewController: UIViewController {
     }
     
     private lazy var loginVC: UIViewController = {
-        UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginSignUpController");
+        UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainTabView");
     }()
     
     @IBAction func skipButtonTapped(_: UIButton) {
